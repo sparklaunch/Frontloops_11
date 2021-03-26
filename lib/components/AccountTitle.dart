@@ -6,7 +6,12 @@ class AccountTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(30.0),
+      padding: EdgeInsets.fromLTRB(
+        30.0,
+        30.0,
+        30.0,
+        15.0,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

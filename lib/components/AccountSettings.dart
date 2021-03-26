@@ -10,17 +10,23 @@ class AccountSettings extends StatelessWidget {
         offset: Offset(30, 0),
         child: Container(
           width: 300.0,
-          padding: EdgeInsets.all(
+          padding: EdgeInsets.fromLTRB(
             30.0,
+            30.0,
+            30.0,
+            0,
           ),
           decoration: BoxDecoration(
             color: Colors.white,
             boxShadow: [
               BoxShadow(
                 color: Colors.black38,
-                blurRadius: 8.0,
+                blurRadius: 30.0,
               ),
             ],
+            borderRadius: BorderRadius.circular(
+              5.0,
+            ),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

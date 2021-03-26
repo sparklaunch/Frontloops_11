@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 
 import "package:frontloops_11/components/AccountTitle.dart";
 import "package:frontloops_11/components/AccountSettings.dart";
+import "package:frontloops_11/components/BottomButtons.dart";
 
 class Main extends StatelessWidget {
   @override
@@ -34,6 +35,10 @@ class Main extends StatelessWidget {
                   height: 30.0,
                 ),
                 AccountSettings(),
+                SizedBox(
+                  height: 30.0,
+                ),
+                BottomButtons(),
               ],
             ),
           ),
