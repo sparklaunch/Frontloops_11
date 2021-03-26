@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 import "package:frontloops_11/components/AccountTitle.dart";
+import "package:frontloops_11/components/AccountSettings.dart";
 
 class Main extends StatelessWidget {
   @override
@@ -10,9 +11,6 @@ class Main extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Container(
-            padding: EdgeInsets.all(
-              30.0,
-            ),
             decoration: BoxDecoration(
               color: Color.fromRGBO(251, 234, 72, 1),
               borderRadius: BorderRadius.circular(
@@ -32,6 +30,10 @@ class Main extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 AccountTitle(),
+                SizedBox(
+                  height: 30.0,
+                ),
+                AccountSettings(),
               ],
             ),
           ),
