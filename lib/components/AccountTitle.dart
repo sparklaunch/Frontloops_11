@@ -1,26 +1,19 @@
 import "package:flutter/material.dart";
 
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
+import 'package:frontloops_11/utilities/constants.dart';
 
 class AccountTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(
-        30.0,
-        30.0,
-        30.0,
-        15.0,
-      ),
+      padding: kAccountTitlePadding,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             "Account Settings",
-            style: TextStyle(
-              fontSize: 24.0,
-              letterSpacing: -1,
-            ),
+            style: kAccountTitleTextStyle,
           ),
           FaIcon(
             FontAwesomeIcons.times,

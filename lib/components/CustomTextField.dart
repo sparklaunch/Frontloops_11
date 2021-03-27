@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:frontloops_11/utilities/constants.dart';
 
 class CustomTextField extends StatefulWidget {
   final String title;
@@ -21,36 +22,12 @@ class _CustomTextFieldState extends State<CustomTextField> {
         children: [
           Text(
             this.widget.title,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color.fromRGBO(155, 160, 172, 1),
-              letterSpacing: -1,
-            ),
+            style: kTextFieldLabelTextStyle,
           ),
-          SizedBox(
-            height: 8.0,
-          ),
+          kGapBetweenTextFieldLabelAndField,
           TextField(
-            decoration: InputDecoration(
+            decoration: kTextFieldDecoration(
               hintText: this.widget.hintText,
-              hintStyle: TextStyle(
-                color: Color.fromRGBO(105, 107, 112, 1),
-                letterSpacing: -1,
-              ),
-              isDense: true,
-              contentPadding: EdgeInsets.only(
-                bottom: 8.0,
-              ),
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(
-                  color: Color.fromRGBO(217, 217, 217, 1),
-                ),
-              ),
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(
-                  color: Color.fromRGBO(217, 217, 217, 1),
-                ),
-              ),
             ),
             onChanged: (event) {
               setState(() {

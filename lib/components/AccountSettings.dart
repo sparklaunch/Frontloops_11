@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+import "package:frontloops_11/utilities/constants.dart";
+
 import "package:frontloops_11/components/CustomTextField.dart";
 
 class AccountSettings extends StatelessWidget {
@@ -7,42 +9,23 @@ class AccountSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Transform.translate(
-        offset: Offset(30, 0),
+        offset: kAccountSettingsOffset,
         child: Container(
-          width: 300.0,
-          padding: EdgeInsets.fromLTRB(
-            30.0,
-            30.0,
-            30.0,
-            0,
-          ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black38,
-                blurRadius: 30.0,
-              ),
-            ],
-            borderRadius: BorderRadius.circular(
-              5.0,
-            ),
-          ),
+          width: kContainerWidth,
+          padding: kAccountSettingsPadding,
+          decoration: kAccountSettingsBoxDecoration,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Transform.translate(
-                offset: Offset(
-                  0,
-                  -62.0,
-                ),
+                offset: kAvatarOffset,
                 child: CircleAvatar(
                   backgroundImage: AssetImage("./assets/images/avatar.jpg"),
                   radius: 30.0,
                 ),
               ),
               Transform.translate(
-                offset: Offset(0, -40),
+                offset: kAccountSettingsContentOffset,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -50,9 +33,7 @@ class AccountSettings extends StatelessWidget {
                       title: "USERNAME",
                       hintText: "Enter your username",
                     ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
+                    kGapBetweenTextFields,
                     Row(
                       children: [
                         Expanded(
@@ -69,16 +50,12 @@ class AccountSettings extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
+                    kGapBetweenTextFields,
                     CustomTextField(
                       title: "EMAIL",
                       hintText: "Enter your email",
                     ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
+                    kGapBetweenTextFields,
                     CustomTextField(
                       title: "BIO",
                       hintText: "Tell us about yourself",
